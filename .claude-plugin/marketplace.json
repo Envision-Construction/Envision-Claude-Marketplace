@@ -11,7 +11,7 @@
       "source": "./plugins/finance/credit",
       "category": "finance",
       "description": "Credit analysis toolkit: leveraged finance, private credit, CRE, structured finance. 14 skills + 2 agents.",
-      "version": "2.0.0"
+      "version": "2.0.1"
     },
     {
       "name": "pe",
@@ -19,7 +19,7 @@
       "source": "./plugins/finance/private-equity",
       "category": "finance",
       "description": "PE deal sourcing, screening, diligence, IC memos, and portfolio management. 10 skills + 10 commands.",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     {
       "name": "cre",
@@ -27,7 +27,7 @@
       "source": "./plugins/real-estate/cre",
       "category": "real-estate",
       "description": "CRE dealmaking lifecycle: acquisition, transaction, ownership, and sector analysis. 9 skills with knowledge bases.",
-      "version": "2.0.0"
+      "version": "2.0.1"
     },
     {
       "name": "insurance",

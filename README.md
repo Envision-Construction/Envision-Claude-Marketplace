@@ -31,11 +31,11 @@ claude plugin install credit@envision-skill-repo     # or pe, cre, insurance, de
 ```
 plugins/
 ├── finance/
-│   ├── credit/            skills/{analysis,process,sectors,reference}/…
-│   ├── private-equity/    skills/{deals,portfolio}/…
+│   ├── credit/            skills/ (14, flat — ids stay short)
+│   ├── private-equity/    skills/ (10, flat)
 │   └── capital/           skills/{edgar-format,earnings-analysis,venture-council}
 ├── real-estate/
-│   └── cre/               skills/{acquisition,transaction,ownership,sectors}/…
+│   └── cre/               skills/ (9, flat)
 ├── construction/
 │   ├── buildr/            skills/{crm,account-360,activity-logging,deal-lifecycle,deal-to-project,pipeline-review}
 │   └── rabbet/            skills/rabbet + commands/rabbet-sync
@@ -60,5 +60,5 @@ Skill ids are `plugin:leaf-dir` — the group folders organize the tree without 
 - Plugin `name` = short kebab-case id (it prefixes every skill id — keep it short).
 - `displayName` (plugin.json + marketplace entry) carries the Title Case title.
 - `SKILL.md` frontmatter `name:` = Title Case display name; the directory name is the invocation id.
-- Grouped skills are declared explicitly via the `skills` array in plugin.json (group dirs are not auto-discovered).
+- Skills live flat under `skills/` (depth-1): the harness derives invocation ids from Title Case `name:` frontmatter when skills are nested, which reintroduced long mixed-case ids — flat + `name:` display keeps ids short AND titles pretty (verified 2026-07-25). Domain grouping lives at the repo level (`plugins/<domain>/<plugin>`).
 - Forked plugins keep upstream LICENSE in the plugin dir and upstream attribution in `author`/`homepage`.

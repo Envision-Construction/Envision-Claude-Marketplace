@@ -1,8 +1,8 @@
 {
   "name": "cre",
   "displayName": "CRE Dealmaking",
-  "version": "2.0.0",
-  "description": "Commercial real estate dealmaking suite: due diligence, underwriting, financing, document ingestion, brokerage, legal, closing, asset management, and industrial. 9 skills grouped by acquisition / transaction / ownership / sectors, each with knowledge bases and sub-skill libraries. Lineage: Envision-Construction/CRE-Dealmaking-Skills (9 single-skill plugins consolidated, Apache-2.0, orig. ahacker-1).",
+  "version": "2.0.1",
+  "description": "Commercial real estate dealmaking suite: due diligence, underwriting, financing, document ingestion, brokerage, legal, closing, asset management, and industrial. 9 skills, each with knowledge bases and sub-skill libraries. Lineage: Envision-Construction/CRE-Dealmaking-Skills (9 single-skill plugins consolidated, Apache-2.0, orig. ahacker-1).",
   "author": {
     "name": "ahacker-1"
   },
@@ -17,14 +17,14 @@
     "brokerage"
   ],
   "skills": [
-    "./skills/acquisition/due-diligence",
-    "./skills/acquisition/underwriting",
-    "./skills/acquisition/financing",
-    "./skills/acquisition/document-ingestion",
-    "./skills/transaction/brokerage",
-    "./skills/transaction/legal",
-    "./skills/transaction/closing",
-    "./skills/ownership/asset-management",
-    "./skills/sectors/industrial"
+    "./skills/asset-management",
+    "./skills/brokerage",
+    "./skills/closing",
+    "./skills/document-ingestion",
+    "./skills/due-diligence",
+    "./skills/financing",
+    "./skills/industrial",
+    "./skills/legal",
+    "./skills/underwriting"
   ]
 }

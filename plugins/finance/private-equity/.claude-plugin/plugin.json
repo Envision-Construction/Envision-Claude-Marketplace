@@ -1,7 +1,7 @@
 {
   "name": "pe",
   "displayName": "Private Equity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Private equity toolkit: deal sourcing, screening, due diligence, IC memos, portfolio monitoring, returns, and value creation. 10 skills grouped by deals / portfolio; each skill is directly slash-invocable. Lineage: anthropics/financial-services private-equity v0.1.2 (Apache-2.0).",
   "author": {
     "name": "Anthropic FSI"
@@ -16,15 +16,15 @@
     "portfolio-monitoring"
   ],
   "skills": [
-    "./skills/deals/deal-sourcing",
-    "./skills/deals/deal-screening",
-    "./skills/deals/dd-checklist",
-    "./skills/deals/dd-meeting-prep",
-    "./skills/deals/ic-memo",
-    "./skills/portfolio/portfolio-monitoring",
-    "./skills/portfolio/returns-analysis",
-    "./skills/portfolio/value-creation-plan",
-    "./skills/portfolio/unit-economics",
-    "./skills/portfolio/ai-readiness"
+    "./skills/ai-readiness",
+    "./skills/dd-checklist",
+    "./skills/dd-meeting-prep",
+    "./skills/deal-screening",
+    "./skills/deal-sourcing",
+    "./skills/ic-memo",
+    "./skills/portfolio-monitoring",
+    "./skills/returns-analysis",
+    "./skills/unit-economics",
+    "./skills/value-creation-plan"
   ]
 }
