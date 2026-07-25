@@ -48,12 +48,9 @@
     {
       "name": "nano-banana-2",
       "displayName": "Nano Banana 2",
-      "source": {
-        "source": "github",
-        "repo": "Envision-Construction/nano-banana-2-mcp"
-      },
+      "source": "./plugins/media/nano-banana-2",
       "category": "media",
-      "description": "Google Gemini Nano Banana 2 image generation via MCP (fork of daveremy/nano-banana-2-mcp).",
+      "description": "Google Gemini Nano Banana 2 image generation via MCP. Vendored from Envision-Construction/nano-banana-2-mcp (development upstream; fork of daveremy/nano-banana-2-mcp).",
       "version": "0.1.1"
     }
   ]
