@@ -18,7 +18,7 @@ claude plugin install credit@envision-skill-repo     # or pe, cre, insurance, de
 | real-estate | `cre` | CRE Dealmaking | 9 skills (acquisition / transaction / ownership / sectors) with knowledge bases | Envision-Construction/CRE-Dealmaking-Skills, orig. ahacker-1 (Apache-2.0) |
 | risk | `insurance` | Envision Insurance | 1 orchestrator skill, 4 specialist agents | first-party |
 | research | `deep-research` | Deep Research | 1 skill (adversarially-verified research pipeline) | first-party |
-| media | `nano-banana-2` | Nano Banana 2 | Gemini image generation via MCP | fork of daveremy/nano-banana-2-mcp |
+| generative | `nano-banana-2` | Nano Banana 2 | Gemini image generation via MCP | fork of daveremy/nano-banana-2-mcp |
 
 ## Layout
 
@@ -31,8 +31,10 @@ plugins/
 │   └── cre/               skills/{acquisition,transaction,ownership,sectors}/…
 ├── risk/
 │   └── insurance/         skills/specialist + agents/
-└── research/
-    └── deep-research/     skills/deep-research
+├── research/
+│   └── deep-research/     skills/deep-research
+└── generative/
+    └── nano-banana-2/     MCP image generation
 ```
 
 Skill ids are `plugin:leaf-dir` — the group folders organize the tree without lengthening ids (e.g. `credit:memo-generator`, `pe:ic-memo`, `cre:underwriting`, `insurance:specialist`).
