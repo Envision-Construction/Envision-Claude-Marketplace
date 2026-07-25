@@ -1,0 +1,20 @@
+{
+  "name": "credit",
+  "displayName": "Credit Investment Analysis",
+  "version": "2.0.0",
+  "description": "Professional credit analysis toolkit spanning leveraged finance, private credit, commercial real estate, and structured finance.",
+  "author": {
+    "name": "Jon Eickmeier"
+  },
+  "license": "MIT",
+  "keywords": [
+    "credit-analysis",
+    "leveraged-finance",
+    "private-credit",
+    "commercial-real-estate",
+    "structured-finance"
+  ],
+  "skills": "./skills/",
+  "agents": "./agents/",
+  "rules": "./.cursor/rules/"
+}

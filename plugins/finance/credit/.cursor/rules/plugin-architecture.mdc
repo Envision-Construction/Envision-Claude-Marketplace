@@ -1,0 +1,13 @@
+---
+description: Keep the plugin portable across harnesses and keep plugin discovery metadata in sync.
+alwaysApply: true
+---
+
+# Plugin Architecture
+
+- Design for standard multi-harness plugin use: keep the core behavior in markdown files and avoid relying on harness-specific features unless there is a documented fallback.
+- Keep repo-wide routing, orchestration, and default behavior in `CLAUDE.md`.
+- Keep agent-specific usage guidance in `AGENTS.md`.
+- Keep harness-specific compatibility notes and fallbacks in `docs/harness-compatibility.md`.
+- When adding or removing plugin surface area, update `.claude-plugin/plugin.json` so skills, agents, commands, and hooks stay discoverable.
+- Prefer patterns that degrade cleanly outside Claude Code. If a workflow depends on a Claude-specific tool or hook, document the manual or alternate path for other harnesses.

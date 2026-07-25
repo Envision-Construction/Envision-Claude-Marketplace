@@ -1,10 +1,50 @@
 {
-  "name": "envision-claude-marketplace",
+  "name": "envision-skill-repo",
   "owner": {
     "name": "Envision-Construction"
   },
-  "description": "Envision-Construction's Claude Code plugin registry. Plugins listed here are forks/controls owned by the org, separated from upstream merge timing.",
+  "description": "Envision-Construction's Claude Code skill registry. Org-owned plugins grouped by domain (finance / real-estate / risk / research / media); forks carry upstream lineage in their descriptions and are decoupled from upstream merge timing.",
   "plugins": [
+    {
+      "name": "credit",
+      "displayName": "Credit Investment Analysis",
+      "source": "./plugins/finance/credit",
+      "category": "finance",
+      "description": "Credit analysis toolkit: leveraged finance, private credit, CRE, structured finance. 14 skills + 2 agents.",
+      "version": "2.0.0"
+    },
+    {
+      "name": "pe",
+      "displayName": "Private Equity",
+      "source": "./plugins/finance/private-equity",
+      "category": "finance",
+      "description": "PE deal sourcing, screening, diligence, IC memos, and portfolio management. 10 skills + 10 commands.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "cre",
+      "displayName": "CRE Dealmaking",
+      "source": "./plugins/real-estate/cre",
+      "category": "real-estate",
+      "description": "CRE dealmaking lifecycle: acquisition, transaction, ownership, and sector analysis. 9 skills with knowledge bases.",
+      "version": "2.0.0"
+    },
+    {
+      "name": "insurance",
+      "displayName": "Envision Insurance",
+      "source": "./plugins/risk/insurance",
+      "category": "risk",
+      "description": "Forensic insurance research: captives (831(b)/831(a)), cell structures, coverage lapses, premium finance. 1 skill + 4 agents.",
+      "version": "2.0.0"
+    },
+    {
+      "name": "deep-research",
+      "displayName": "Deep Research",
+      "source": "./plugins/research/deep-research",
+      "category": "research",
+      "description": "Deep research harness: 5 search angles, 15 deduped sources, adversarial claim verification, confidence-ranked cited report.",
+      "version": "1.0.0"
+    },
     {
       "name": "nano-banana-2",
       "displayName": "Nano Banana 2",
@@ -12,22 +52,9 @@
         "source": "github",
         "repo": "Envision-Construction/nano-banana-2-mcp"
       },
-      "description": "Google Gemini Nano Banana 2 image generation via MCP (Envision-Construction fork of daveremy/nano-banana-2-mcp). Patched: inner marketplace.json removed.",
+      "category": "media",
+      "description": "Google Gemini Nano Banana 2 image generation via MCP (fork of daveremy/nano-banana-2-mcp).",
       "version": "0.1.1"
-    },
-    {
-      "name": "envision-insurance",
-      "displayName": "Envision Insurance",
-      "source": "./plugins/envision-insurance",
-      "description": "Forensic insurance research: captive formation and IRS enforcement (831(b)/T.D. 10029), cell structures, coverage lapses, premium finance. Skill + 4 specialist agents, primary-source citation discipline. First-party.",
-      "version": "1.0.2"
-    },
-    {
-      "name": "deep-research",
-      "displayName": "Deep Research",
-      "source": "./plugins/deep-research",
-      "description": "Deep research harness: decompose a question into 5 search angles, fan-out web searches, fetch up to 15 deduped sources, extract falsifiable claims, adversarially verify every claim (3 checks, 2/3 refutations kill), synthesize a confidence-ranked cited report. General-purpose port of Claude Code's built-in deep-research workflow. First-party.",
-      "version": "1.0.0"
     }
   ]
 }

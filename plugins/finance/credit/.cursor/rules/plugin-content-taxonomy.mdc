@@ -1,0 +1,13 @@
+---
+description: Keep durable analytical knowledge in skills and changing inputs in root references, while reusing existing content before adding new files.
+alwaysApply: true
+---
+
+# Content Taxonomy
+
+- Put timeless analytical principles, workflows, and interpretation guidance in `skills/*/SKILL.md` and skill-level `references/`.
+- Put changing values in root `references/`: market data, spread ranges, default and recovery statistics, deal parameters, portfolio limits, threshold settings, stress sizes, and similar refreshable benchmarks.
+- Do not hard-code live or fast-changing values into skills or methodology references. Point to the relevant root file such as `references/market-benchmarks.md`, `references/portfolio-risk-parameters.md`, or `references/typical-deal-parameters.md`.
+- Before adding a new skill or reference, check whether the concept already exists. Prefer amending, consolidating, renaming, or cross-referencing existing content over creating near-duplicates.
+- Keep skill-level references directly under each skill's `references/` directory unless a skill already has a stronger local convention. Do not introduce new bucketed subfolders unless the repo explicitly adopts them.
+- Follow the repo path rules: root `references/...` paths resolve from the project root, skill-local references use paths relative to the owning skill, and cross-skill references use explicit `skills/<skill-name>/references/...` paths.

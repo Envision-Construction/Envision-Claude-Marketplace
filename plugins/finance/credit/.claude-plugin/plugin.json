@@ -1,0 +1,38 @@
+{
+  "name": "credit",
+  "displayName": "Credit Investment Analysis",
+  "version": "2.0.0",
+  "description": "Professional credit analysis toolkit spanning leveraged finance, private credit, commercial real estate, and structured finance. 14 skills grouped by analysis / process / sectors / reference, plus credit-analyst and credit-committee agents. Lineage: jeickmeier/credit-investment-analysis-plugin v1.3.0 (MIT).",
+  "author": {
+    "name": "Jon Eickmeier"
+  },
+  "homepage": "https://github.com/jeickmeier/credit-investment-analysis-plugin",
+  "license": "MIT",
+  "keywords": [
+    "credit-analysis",
+    "leveraged-finance",
+    "private-credit",
+    "commercial-real-estate",
+    "structured-finance"
+  ],
+  "skills": [
+    "./skills/analysis/modeling-and-valuation",
+    "./skills/analysis/debt-structure-covenants",
+    "./skills/analysis/trading-pricing-mechanics",
+    "./skills/analysis/events-distressed",
+    "./skills/process/memo-generator",
+    "./skills/process/due-diligence-and-assessment",
+    "./skills/process/surveillance-monitoring",
+    "./skills/process/portfolio-investment-process",
+    "./skills/sectors/industry-sector-analysis",
+    "./skills/sectors/private-credit-middle-market",
+    "./skills/sectors/securitization-and-clos",
+    "./skills/sectors/specialized-asset-finance",
+    "./skills/sectors/cre-analysis-underwriting",
+    "./skills/reference/leveraged-finance-glossary"
+  ],
+  "agents": [
+    "./agents/credit-analyst.agent.md",
+    "./agents/credit-committee.agent.md"
+  ]
+}
