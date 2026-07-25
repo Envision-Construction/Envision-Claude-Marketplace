@@ -1,8 +1,8 @@
 {
-  "name": "fin-docs",
-  "displayName": "Finance Docs",
+  "name": "capital",
+  "displayName": "Capital Markets",
   "version": "1.0.0",
-  "description": "Financial deliverables: EDGAR/SEC-style document formatting, equity research earnings updates, and VC-panel pitch review (venture-council). Migrated from claude-code-memory global/skills 2026-07-25.",
+  "description": "Capital markets deliverables: EDGAR/SEC-style document formatting, equity research earnings updates, and VC-panel pitch review (venture-council). Migrated from claude-code-memory global/skills 2026-07-25.",
   "author": {
     "name": "Prometheus Ventures / Envision Construction"
   },

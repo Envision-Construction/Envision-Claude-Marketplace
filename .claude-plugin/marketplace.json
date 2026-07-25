@@ -78,11 +78,11 @@
       "version": "1.0.0"
     },
     {
-      "name": "fin-docs",
-      "displayName": "Finance Docs",
-      "source": "./plugins/finance/fin-docs",
+      "name": "capital",
+      "displayName": "Capital Markets",
+      "source": "./plugins/finance/capital",
       "category": "finance",
-      "description": "EDGAR formatting, earnings analysis reports, VC-panel pitch review. 3 skills.",
+      "description": "Capital markets deliverables: EDGAR formatting, earnings analysis reports, VC-panel pitch review. 3 skills.",
       "version": "1.0.0"
     },
     {

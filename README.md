@@ -21,7 +21,7 @@ claude plugin install credit@envision-skill-repo     # or pe, cre, insurance, de
 | construction | `buildr` | Buildr CRM | 6 skills (pipeline, deals, accounts, activity, handoff) | first-party (ex claude-code-memory) |
 | construction | `rabbet` | Rabbet | 1 skill + sync command (draws, budgets, pay apps) | first-party (ex claude-code-memory) |
 | marketing | `brand` | Envision Brand | 3 skills (standard, design-system, pdf) | first-party (ex claude-code-memory) |
-| finance | `fin-docs` | Finance Docs | 3 skills (EDGAR, earnings, venture-council) | first-party (ex claude-code-memory) |
+| finance | `capital` | Capital Markets | 3 skills (EDGAR, earnings, venture-council) | first-party (ex claude-code-memory) |
 | infra | `gke` | GKE AI Platform | 3 skills (dispatch, ai-platform, agent-runtime) | first-party (ex claude-code-memory) |
 | legal | `general-counsel` | General Counsel | 11 skills + 14 agents | vendored from Envision-Construction/general-counsel |
 | generative | `nano-banana-2` | Nano Banana 2 | Gemini image generation via MCP | fork of daveremy/nano-banana-2-mcp |
@@ -33,7 +33,7 @@ plugins/
 ├── finance/
 │   ├── credit/            skills/{analysis,process,sectors,reference}/…
 │   ├── private-equity/    skills/{deals,portfolio}/…
-│   └── fin-docs/          skills/{edgar-format,earnings-analysis,venture-council}
+│   └── capital/           skills/{edgar-format,earnings-analysis,venture-council}
 ├── real-estate/
 │   └── cre/               skills/{acquisition,transaction,ownership,sectors}/…
 ├── construction/
