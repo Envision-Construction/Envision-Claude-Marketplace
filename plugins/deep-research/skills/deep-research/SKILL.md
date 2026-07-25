@@ -1,5 +1,5 @@
 ---
-name: deep-research
+name: Deep Research
 description: Deep research harness. Decompose a question into complementary search angles, run fan-out web searches, fetch sources, extract falsifiable claims, adversarially verify every claim, and synthesize a confidence-ranked cited report. Use whenever the user asks for deep research, a multi-source fact-checked report, due diligence, or market / technical / competitive / scientific research on ANY topic. Before starting, if the question is underspecified (e.g. "what car should I buy" without budget/use-case/region), ask 2-3 clarifying questions to narrow scope.
 ---
 

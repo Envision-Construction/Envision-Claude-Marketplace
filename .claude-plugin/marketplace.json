@@ -7,6 +7,7 @@
   "plugins": [
     {
       "name": "nano-banana-2",
+      "displayName": "Nano Banana 2",
       "source": {
         "source": "github",
         "repo": "Envision-Construction/nano-banana-2-mcp"
@@ -16,12 +17,14 @@
     },
     {
       "name": "envision-insurance",
+      "displayName": "Envision Insurance",
       "source": "./plugins/envision-insurance",
       "description": "Forensic insurance research: captive formation and IRS enforcement (831(b)/T.D. 10029), cell structures, coverage lapses, premium finance. Skill + 4 specialist agents, primary-source citation discipline. First-party.",
       "version": "1.0.2"
     },
     {
       "name": "deep-research",
+      "displayName": "Deep Research",
       "source": "./plugins/deep-research",
       "description": "Deep research harness: decompose a question into 5 search angles, fan-out web searches, fetch up to 15 deduped sources, extract falsifiable claims, adversarially verify every claim (3 checks, 2/3 refutations kill), synthesize a confidence-ranked cited report. General-purpose port of Claude Code's built-in deep-research workflow. First-party.",
       "version": "1.0.0"

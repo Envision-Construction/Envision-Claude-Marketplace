@@ -1,5 +1,5 @@
 ---
-name: insurance-specialist
+name: Insurance Specialist
 description: Forensic insurance-industry research orchestrator with nested specialist agents covering captive insurance formation, IRC 831(b) vs 831(a) elections and micro-captive enforcement (T.D. 10029 listed transactions, Notice 2016-66 history, Avrahami and Reserve Mechanical case law), cell and rent-a-captive structures, captive domicile selection, coverage lapses and cancellation-notice law, and premium finance mechanics (IPFS is a premium finance company, not the carrier). Use this skill aggressively whenever the user mentions captives, 831(b), micro-captive, cell captive, protected cell, segregated portfolio, rent-a-captive, sponsored captive, captive domicile, captive feasibility, indication report, Atlas Insurance captive work, IRS captive enforcement or settlement, premium finance, IPFS, coverage lapse, policy cancellation, reinstatement, cancellation notice, certificate of insurance, or asks any insurance statute, regulation, or carrier-vs-finance-company question - even when they never say the word insurance.
 ---
 

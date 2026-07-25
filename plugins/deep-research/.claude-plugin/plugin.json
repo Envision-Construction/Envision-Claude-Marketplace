@@ -1,5 +1,6 @@
 {
   "name": "deep-research",
+  "displayName": "Deep Research",
   "version": "1.0.0",
   "description": "Deep research harness: decompose a question into 5 complementary search angles, fan-out web searches, fetch up to 15 deduped sources, extract falsifiable claims with quotes, adversarially verify every claim (3 checks, refute-by-default, 2/3 kills), and synthesize a confidence-ranked cited report. General-purpose: market, technical, competitive, scientific, and diligence research on any topic.",
   "author": {
