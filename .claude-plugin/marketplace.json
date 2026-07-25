@@ -51,7 +51,7 @@
       "source": "./plugins/generative/nano-banana-2",
       "category": "generative",
       "description": "Google Gemini Nano Banana 2 image generation via MCP. Vendored from Envision-Construction/nano-banana-2-mcp (development upstream; fork of daveremy/nano-banana-2-mcp).",
-      "version": "0.1.1"
+      "version": "0.1.2"
     },
     {
       "name": "buildr",
