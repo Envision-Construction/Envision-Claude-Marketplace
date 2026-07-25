@@ -1,0 +1,25 @@
+{
+  "name": "buildr",
+  "displayName": "Buildr CRM",
+  "version": "1.0.0",
+  "description": "Envision Construction's Buildr CRM surface: BD pipeline, deals, accounts, contacts, activity logging, and won-deal-to-project handoff. Routes through Envision-MCP gateway tools (buildr_read/buildr_write). Migrated from claude-code-memory global/skills 2026-07-25.",
+  "author": {
+    "name": "Prometheus Ventures / Envision Construction"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "buildr",
+    "crm",
+    "pipeline",
+    "construction",
+    "bd"
+  ],
+  "skills": [
+    "./skills/crm",
+    "./skills/account-360",
+    "./skills/activity-logging",
+    "./skills/deal-lifecycle",
+    "./skills/deal-to-project",
+    "./skills/pipeline-review"
+  ]
+}

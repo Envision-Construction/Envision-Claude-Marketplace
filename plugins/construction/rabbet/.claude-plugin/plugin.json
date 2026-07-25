@@ -1,0 +1,19 @@
+{
+  "name": "rabbet",
+  "displayName": "Rabbet",
+  "version": "1.0.0",
+  "description": "Rabbet construction lending platform: MCP integration (projects, draws, vendors, funding sources), draw management, budget tracking, retainage, pay applications, and the /rabbet:rabbet-sync Procore-to-Rabbet sync command. Migrated from claude-code-memory global/skills 2026-07-25.",
+  "author": {
+    "name": "Prometheus Ventures / Envision Construction"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "rabbet",
+    "construction-lending",
+    "draws",
+    "procore"
+  ],
+  "skills": [
+    "./skills/rabbet"
+  ]
+}

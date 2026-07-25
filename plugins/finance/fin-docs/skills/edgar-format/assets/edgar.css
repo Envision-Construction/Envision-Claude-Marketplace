@@ -1,0 +1,249 @@
+/*
+ * edgar.css — master stylesheet for the HTML and PDF renderers.
+ *
+ * Encodes the forensic visual contract from
+ * references/financial-statements.md. If you tweak EDGAR styling, change
+ * the spec first, then update this file. Render scripts read no inline
+ * styles — everything lives here so a single audit of this file proves the
+ * look is consistent.
+ */
+
+/* ----- Page & body ------------------------------------------------------ */
+
+@page {
+    size: letter;
+    margin: 1in 0.75in 1in 0.75in;
+    /* Page number bottom-center: F-1 in financial-statement front matter,
+       arabic in body. The renderer picks the right counter. */
+    @bottom-center {
+        content: counter(page);
+        font-family: 'Times New Roman', 'Liberation Serif', 'Tinos', serif;
+        font-size: 10pt;
+        color: #000;
+    }
+}
+
+html, body {
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', 'Liberation Serif', 'Tinos', serif;
+    font-size: 10pt;
+    line-height: 1.25;
+}
+
+/* No accent color anywhere — EDGAR is black on white only. */
+* { color: #000; }
+a { color: #000; text-decoration: underline; }
+
+/* ----- Statement title block ------------------------------------------- */
+
+.edgar-segment {
+    margin: 0;
+    padding: 0;
+}
+
+.edgar-registrant {
+    text-align: center;
+    font-weight: bold;
+    font-size: 11pt;
+    margin: 0 0 2pt 0;
+}
+
+.edgar-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin: 0 0 2pt 0;
+}
+
+.edgar-units {
+    text-align: center;
+    font-style: italic;
+    font-size: 9pt;
+    margin: 0 0 18pt 0;
+}
+
+/* ----- Statement table -------------------------------------------------- */
+
+.edgar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+.edgar-table th,
+.edgar-table td {
+    padding: 1pt 4pt;
+    vertical-align: bottom;
+    font-size: 10pt;
+    border: 0;
+}
+
+/* Period header ("Years Ended December 31,") spans the numeric columns. */
+.edgar-period-header {
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 2pt;
+}
+
+/* Column year headers — bold, right, thin bottom rule. */
+.edgar-col-year {
+    text-align: right;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    padding: 1pt 4pt;
+    white-space: nowrap;
+}
+
+/* Label cells (left column) */
+.edgar-table td.edgar-label {
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Indents — 0.25" per level, capped at 3 */
+.edgar-indent-0 { padding-left: 0; }
+.edgar-indent-1 { padding-left: 0.25in; }
+.edgar-indent-2 { padding-left: 0.5in; }
+.edgar-indent-3 { padding-left: 0.75in; }
+
+/* Numeric cells — right-aligned, no wrap, monospaced tab so figures
+   line up on the decimal/units column. */
+.edgar-table td.edgar-num {
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Floating $ — the $ sits in its own ::before cell anchored to the LEFT
+   of the numeric cell, exactly like a real EDGAR table renders. Only on
+   rows where the data emitter set .edgar-dollar. */
+.edgar-table td.edgar-num.edgar-dollar::before {
+    content: "$";
+    float: left;
+    margin-right: 0.25em;
+}
+
+/* Subtotal rule: thin top border on each numeric cell. The label cell
+   stays clean — the rule does NOT extend across the label column, just
+   like real filings. */
+.edgar-table tr.edgar-subtotal td.edgar-num {
+    border-top: 1px solid #000;
+}
+
+/* Grand total rule: thin top + double bottom on each numeric cell. */
+.edgar-table tr.edgar-grand-total td.edgar-num {
+    border-top: 1px solid #000;
+    border-bottom: 3px double #000;
+}
+
+/* Section header ("Operating expenses:" or "Current assets:"): a label
+   row with no numeric values. Padding above to separate sections. */
+.edgar-table tr.edgar-section-header td {
+    font-weight: normal;
+    padding-top: 6pt;
+}
+
+/* Banner row (ASSETS / LIABILITIES AND STOCKHOLDERS' EQUITY) — all caps,
+   regular weight, slightly more vertical space. */
+.edgar-table tr.edgar-banner td {
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-top: 9pt;
+}
+
+/* Text-only row (e.g., "Commitments and contingencies") — no rule, no
+   alignment changes. */
+.edgar-table tr.edgar-text-only td {
+    font-style: normal;
+}
+
+/* Spacer — blank row, narrow */
+.edgar-table tr.edgar-spacer td {
+    height: 6pt;
+    line-height: 6pt;
+    padding: 0;
+}
+
+/* No bold in body data rows — EDGAR uses rules, not weight, for emphasis. */
+.edgar-table tr.edgar-data td.edgar-num,
+.edgar-table tr.edgar-subtotal td.edgar-num,
+.edgar-table tr.edgar-grand-total td.edgar-num {
+    font-weight: normal;
+}
+
+/* ----- Full-filing mode (cover page + body + statements) --------------- */
+
+.edgar-cover {
+    page-break-after: always;
+    text-align: center;
+    padding: 0;
+}
+
+.edgar-cover .edgar-cover-title-bar {
+    margin: 2in 0 0.5in 0;
+    font-weight: bold;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+
+.edgar-cover .edgar-cover-subtitle {
+    font-size: 11pt;
+    margin: 0 0 0.5in 0;
+}
+
+.edgar-cover .edgar-form-type {
+    font-weight: bold;
+    font-size: 24pt;
+    margin: 0.5in 0 0.5in 0;
+}
+
+.edgar-cover .edgar-registrant-name {
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 0.5in 0 0.25in 0;
+}
+
+.edgar-cover .edgar-cover-field {
+    margin: 0.1in 0;
+    font-size: 11pt;
+}
+
+/* Body sections — PART I / ITEM 1. BUSINESS layout */
+
+.edgar-part {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14pt;
+    margin: 24pt 0 12pt 0;
+    page-break-before: always;
+}
+
+.edgar-item {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11pt;
+    margin: 18pt 0 8pt 0;
+}
+
+.edgar-body p {
+    text-align: justify;
+    text-indent: 0;
+    margin: 0 0 6pt 0;
+}
+
+/* Mock-filing watermark in the header of every page — required by the
+   skill's guardrails (NEVER claim output is a real or filable SEC document). */
+.edgar-watermark {
+    position: running(watermark);
+    text-align: center;
+    font-size: 8pt;
+    color: #666;
+    font-style: italic;
+}

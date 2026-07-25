@@ -3,7 +3,7 @@
   "owner": {
     "name": "Envision-Construction"
   },
-  "description": "Envision-Construction's Claude Code skill registry. Org-owned plugins grouped by domain (finance / real-estate / risk / research / generative); forks carry upstream lineage in their descriptions and are decoupled from upstream merge timing.",
+  "description": "Envision-Construction's Claude Code skill registry. Org-owned plugins grouped by domain (finance / real-estate / construction / marketing / infra / legal / risk / research / generative); forks carry upstream lineage in their descriptions and are decoupled from upstream merge timing.",
   "plugins": [
     {
       "name": "credit",
@@ -52,6 +52,54 @@
       "category": "generative",
       "description": "Google Gemini Nano Banana 2 image generation via MCP. Vendored from Envision-Construction/nano-banana-2-mcp (development upstream; fork of daveremy/nano-banana-2-mcp).",
       "version": "0.1.1"
+    },
+    {
+      "name": "buildr",
+      "displayName": "Buildr CRM",
+      "source": "./plugins/construction/buildr",
+      "category": "construction",
+      "description": "Buildr CRM: pipeline, deals, accounts, activity logging, deal-to-project handoff. 6 skills.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "rabbet",
+      "displayName": "Rabbet",
+      "source": "./plugins/construction/rabbet",
+      "category": "construction",
+      "description": "Rabbet construction lending: draws, budgets, pay apps + Procore sync command.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "brand",
+      "displayName": "Envision Brand",
+      "source": "./plugins/marketing/brand",
+      "category": "marketing",
+      "description": "Envision 2026 brand standard, document design system, and branded PDF rendering. 3 skills.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "fin-docs",
+      "displayName": "Finance Docs",
+      "source": "./plugins/finance/fin-docs",
+      "category": "finance",
+      "description": "EDGAR formatting, earnings analysis reports, VC-panel pitch review. 3 skills.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gke",
+      "displayName": "GKE AI Platform",
+      "source": "./plugins/infra/gke",
+      "category": "infra",
+      "description": "GKE parallel dispatch, AI platform provisioning, agent runtime for claude-mcp-457317. 3 skills.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "general-counsel",
+      "displayName": "General Counsel",
+      "source": "./plugins/legal/general-counsel",
+      "category": "legal",
+      "description": "Legal intelligence: 9 practice-area specialists + insurance suite + gc-consult workflow. Vendored from Envision-Construction/general-counsel (dev upstream).",
+      "version": "1.2.0"
     }
   ]
 }

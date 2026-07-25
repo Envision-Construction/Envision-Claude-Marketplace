@@ -18,6 +18,12 @@ claude plugin install credit@envision-skill-repo     # or pe, cre, insurance, de
 | real-estate | `cre` | CRE Dealmaking | 9 skills (acquisition / transaction / ownership / sectors) with knowledge bases | Envision-Construction/CRE-Dealmaking-Skills, orig. ahacker-1 (Apache-2.0) |
 | risk | `insurance` | Envision Insurance | 1 orchestrator skill, 4 specialist agents | first-party |
 | research | `deep-research` | Deep Research | 1 skill (adversarially-verified research pipeline) | first-party |
+| construction | `buildr` | Buildr CRM | 6 skills (pipeline, deals, accounts, activity, handoff) | first-party (ex claude-code-memory) |
+| construction | `rabbet` | Rabbet | 1 skill + sync command (draws, budgets, pay apps) | first-party (ex claude-code-memory) |
+| marketing | `brand` | Envision Brand | 3 skills (standard, design-system, pdf) | first-party (ex claude-code-memory) |
+| finance | `fin-docs` | Finance Docs | 3 skills (EDGAR, earnings, venture-council) | first-party (ex claude-code-memory) |
+| infra | `gke` | GKE AI Platform | 3 skills (dispatch, ai-platform, agent-runtime) | first-party (ex claude-code-memory) |
+| legal | `general-counsel` | General Counsel | 11 skills + 14 agents | vendored from Envision-Construction/general-counsel |
 | generative | `nano-banana-2` | Nano Banana 2 | Gemini image generation via MCP | fork of daveremy/nano-banana-2-mcp |
 
 ## Layout
@@ -26,9 +32,19 @@ claude plugin install credit@envision-skill-repo     # or pe, cre, insurance, de
 plugins/
 ├── finance/
 │   ├── credit/            skills/{analysis,process,sectors,reference}/…
-│   └── private-equity/    skills/{deals,portfolio}/…
+│   ├── private-equity/    skills/{deals,portfolio}/…
+│   └── fin-docs/          skills/{edgar-format,earnings-analysis,venture-council}
 ├── real-estate/
 │   └── cre/               skills/{acquisition,transaction,ownership,sectors}/…
+├── construction/
+│   ├── buildr/            skills/{crm,account-360,activity-logging,deal-lifecycle,deal-to-project,pipeline-review}
+│   └── rabbet/            skills/rabbet + commands/rabbet-sync
+├── marketing/
+│   └── brand/             skills/{standard,design-system,pdf}
+├── infra/
+│   └── gke/               skills/{dispatch,ai-platform,agent-runtime}
+├── legal/
+│   └── general-counsel/   skills/ (9 practice areas + insurance suite) + agents/
 ├── risk/
 │   └── insurance/         skills/specialist + agents/
 ├── research/

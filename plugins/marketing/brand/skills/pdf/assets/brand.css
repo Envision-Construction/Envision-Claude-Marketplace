@@ -1,0 +1,42 @@
+/* Envision 2026 brand CSS — consumed by envision-pdf/scripts/render.py.
+   This is the rendering layer of the brand. The canonical standard lives in the
+   `envision-brand` skill; if the two disagree, envision-brand wins. */
+:root{
+  --envision-black:#000000; --envision-dark:#111111; --envision-grey:#929296;
+  --envision-light-grey:#E6E6E6; --envision-green:#007A53; --envision-light-green:#CAE8E0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color:var(--envision-black); background:#fff;
+  font-size:14px; line-height:1.5; letter-spacing:0;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:860px;margin:0 auto;padding:0 0 56px;}
+.cover{background:var(--envision-dark);color:#fff;padding:28px 40px 30px;}
+.identity{display:flex;justify-content:space-between;align-items:baseline;}
+.wordmark{font-weight:700;letter-spacing:-0.02em;font-size:24px;}
+.tagline{font-weight:700;font-size:11px;letter-spacing:0.04em;color:#fff;}
+.doctitle{font-weight:700;font-size:30px;letter-spacing:-0.03em;line-height:1.05;margin:22px 0 6px;}
+.docmeta{font-weight:500;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--envision-light-green);}
+.body{padding:30px 40px 0;}
+h1{font-weight:700;font-size:23px;letter-spacing:-0.03em;line-height:1.1;margin:6px 0 4px;}
+h2{color:var(--envision-green);font-weight:700;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;margin:28px 0 10px;}
+h3{font-weight:700;font-size:13px;margin:16px 0 6px;}
+p{margin:0 0 10px;}
+ul,ol{margin:0 0 10px;padding-left:18px;}
+li{margin:0 0 7px;}
+strong{font-weight:700;}
+a{color:var(--envision-green);text-decoration:none;}
+.lead{font-size:16px;}
+hr{border:none;border-top:1px solid var(--envision-light-grey);margin:20px 0;}
+table{width:100%;border-collapse:collapse;margin:4px 0 8px;font-variant-numeric:tabular-nums;}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--envision-light-grey);vertical-align:top;}
+th{font-weight:500;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--envision-grey);}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+tr.total td{border-top:2px solid var(--envision-dark);border-bottom:none;font-weight:700;}
+.note{font-size:12px;color:var(--envision-grey);margin:2px 0 0;}
+.footer{margin:34px 40px 0;padding-top:14px;border-top:1px solid var(--envision-light-grey);font-size:11px;color:var(--envision-grey);letter-spacing:0.02em;}
+.footer a{font-weight:700;}
+@media print{.page{max-width:none;}}

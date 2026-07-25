@@ -1,0 +1,21 @@
+{
+  "name": "brand",
+  "displayName": "Envision Brand",
+  "version": "1.0.0",
+  "description": "Envision 2026 brand system: the canonical brand standard (voice, palette, typography, logo rules), the document design system with pdfme generation, and brand-locked PDF rendering. Migrated from claude-code-memory global/skills 2026-07-25.",
+  "author": {
+    "name": "Prometheus Ventures / Envision Construction"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "brand",
+    "envision",
+    "design-system",
+    "pdf"
+  ],
+  "skills": [
+    "./skills/standard",
+    "./skills/design-system",
+    "./skills/pdf"
+  ]
+}

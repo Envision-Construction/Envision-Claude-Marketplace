@@ -1,0 +1,22 @@
+{
+  "name": "fin-docs",
+  "displayName": "Finance Docs",
+  "version": "1.0.0",
+  "description": "Financial deliverables: EDGAR/SEC-style document formatting, equity research earnings updates, and VC-panel pitch review (venture-council). Migrated from claude-code-memory global/skills 2026-07-25.",
+  "author": {
+    "name": "Prometheus Ventures / Envision Construction"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "edgar",
+    "sec",
+    "earnings",
+    "equity-research",
+    "pitch-review"
+  ],
+  "skills": [
+    "./skills/edgar-format",
+    "./skills/earnings-analysis",
+    "./skills/venture-council"
+  ]
+}
